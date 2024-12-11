@@ -1,0 +1,100 @@
+{
+	"easycom": {
+		"autoscan": true,
+		// 注意一定要放在custom里，否则无效，https://ask.dcloud.net.cn/question/131175
+		"custom": {
+			"^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^lyf-": "@/components/lyf-$1/lyf-$1/.vue"
+		}
+	},
+	"pages": [{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "home"
+			}
+		},
+		{
+			"path": "pages/signUp/signUp",
+			"style": {
+				"navigationBarTitleText": "signUp"
+			}
+		},
+		{
+			"path": "pages/signIn/signIn",
+			"style": {
+				"navigationBarTitleText": "signIn"
+			}
+		},
+		{
+			"path": "pages/cart/cart",
+			"style": {
+				"navigationBarTitleText": "cart"
+			}
+		},
+		{
+			"path": "pages/explore/explore",
+			"style": {
+				"navigationBarTitleText": "explore"
+			}
+		},
+		{
+			"path": "pages/account/account",
+			"style": {
+				"navigationBarTitleText": "account"
+			}
+		},
+		{
+			"path": "pages/favourite/favourite",
+			"style": {
+				"navigationBarTitleText": "favourite"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationStyle": "custom",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#333",
+		"selectedColor": "$band-theme-color",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/home-active.png",
+				"text": "home"
+			},
+			{
+				"pagePath": "pages/explore/explore",
+				"iconPath": "static/tabbar/explore.png",
+				"selectedIconPath": "static/tabbar/explore-active.png",
+				"text": "explore"
+			},
+			{
+				"pagePath": "pages/cart/cart",
+				"iconPath": "static/tabbar/cart.png",
+				"selectedIconPath": "static/tabbar/cart-active.png",
+				"text": "cart"
+			},
+			{
+				"pagePath": "pages/favourite/favourite",
+				"iconPath": "static/tabbar/favourite.png",
+				"selectedIconPath": "static/tabbar/favourite-active.png",
+				"text": "favourite"
+			},
+			{
+				"pagePath": "pages/account/account",
+				"iconPath": "static/tabbar/account.png",
+				"selectedIconPath": "static/tabbar/account-active.png",
+				"text": "account"
+			}
+		]
+	}
+}

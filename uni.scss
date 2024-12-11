@@ -1,0 +1,36 @@
+
+@import 'uview-plus/theme.scss';
+@import "@/common/styles/base-style.scss";
+
+@mixin my-flex($direction: column) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin my-flex-ai($ai: center){
+	display: flex;
+	align-items: $ai;
+}
+
+@mixin my-flex-jc($jc: center){
+	display: flex;
+	justify-content: $jc;
+}
+
+@mixin my-flex-set($jc: center, $ai: center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+
+
+@mixin ellipsis($row:1){
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;				//溢出内容隐藏
+	text-overflow: ellipsis;		//文本溢出部分用省略号表示
+	display: -webkit-box;			//特别显示模式
+	-webkit-line-clamp: $row;			//行数
+	line-clamp: $row;					
+	-webkit-box-orient: vertical;	//盒子中内容竖直排列	
+}

@@ -1,0 +1,14 @@
+@font-face { font-family: 'AlibabaPuHuiTi-Light'; src: url('../../assets/fonts/Alibaba-PuHuiTi-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; } 
+
+body, html { 
+	font-family: 'AlibabaPuHuiTi-Light', 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+	}
+
+* {
+	box-sizing: border-box;
+}
+.safe-area-bottom{
+		width: 100%;
+		height: env(safe-area-inset-bottom);
+		background: #fff;	
+}
