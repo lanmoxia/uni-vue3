@@ -23,7 +23,7 @@
 		<view class="container">
 			<!-- 搜索框 -->
 			<view class="search-bar">
-				<lyf-search-bar></lyf-search-bar>
+				<lyf-search-bar :disabled="disabled"></lyf-search-bar>
 			</view>
 			<!-- 轮播海报 -->
 			<view class="banner">
@@ -45,6 +45,10 @@
 
 	</view>
 </template>
+
+<script setup>
+	const disabled = ref(true)
+</script>
 
 <style lang="scss" scoped>
 	.home-wrapper {
