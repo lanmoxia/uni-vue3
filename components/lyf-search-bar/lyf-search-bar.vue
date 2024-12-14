@@ -1,37 +1,48 @@
 <template>
-	<view class="search-wrapper">
-		<view class="container">
-			<image src="../../common/icons/explore.svg" />
-			<text>Search Store</text>
-		</view>
-	</view>
+	<up-input disabled="disabled" v-model="value" :placeholder="placeholder"
+		custom-style="background: #F2F3F2FF; height: 93rpx; border-radius: 27rpx; padding: 29rpx 27rpx;"
+		prefixIconStyle="width: 33rpx !important; height: 33rpx !important;" border="none"
+		placeholder-class="placeholder-style" prefixIcon="../../common/icons/explore.svg"></up-input>
 </template>
 
-<style lang="scss" scoped>
-	.search-wrapper {
-		height: 93rpx;
-		border-radius: 27rpx;
-		background: #F2F3F2FF;
-		border: 1px solid transparent;
-		padding-left: 27rpx;
+<script setup>
+	import {ref,onMounted,computed} from 'vue';
 
-		@include my-flex-set(flex-start, center);
-
-		>.container {
-			height: 35rpx;
-			@include my-flex-set(center, baseline);
-
-			>image {
-				width: 33rpx;
-				height: 33rpx;
-			}
-
-			>text {
-				padding-left: 8rpx;
-				font-size: 25rpx;
-				line-height: 25rpx;
-				color: rgba(124, 124, 124, 1);
-			}
+	const props = defineProps({
+		disabled: {
+			type: Boolean,
+			default: false
 		}
+	})
+	const placeholder = computed(() => {
+		return `Search Store`
+	})
+	const value = ref('')
+</script>
+
+
+<style lang="scss" scoped>
+	:deep(.u-input__content) {
+		height: 35rpx !important;
+		@include my-flex-set(center, baseline);
+	}
+
+	:deep(.u-input__content__field-wrapper__field) {
+		font-size: 25rpx !important;
+	}
+
+	:deep(.uni-input-wrapper) {
+		height: 35rpx !important;
+	}
+
+	:deep(..u-input__content__prefix-icon) {
+		margin-right: 16rpx !important;
+	}
+
+	.placeholder-style {
+		display: flex;
+		align-items: center;
+		font-size: 25rpx !important;
+		color: #7C7C7C !important;
 	}
 </style>
