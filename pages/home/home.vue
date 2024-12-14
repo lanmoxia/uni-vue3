@@ -34,12 +34,12 @@
 				<view class="exclusive-offer">
 					<lyf-product></lyf-product>
 				</view>
-				<!-- <view class="best-selling">
-					<lyf-product></lyf-product>
-				</view> -->
-				<!-- <view class="groceries">
+				<view class="best-selling">
+					<lyf-product :categoryName="categoryName"></lyf-product>
+				</view>
+				<view class="groceries">
 					<lyf-product-expand></lyf-product-expand>
-				</view> -->
+				</view>
 			</view>
 		</view>
 
@@ -47,7 +47,9 @@
 </template>
 
 <script setup>
+	import {ref} from 'vue'
 	const disabled = ref(true)
+	const categoryName = ref('Best Selling')
 </script>
 
 <style lang="scss" scoped>
