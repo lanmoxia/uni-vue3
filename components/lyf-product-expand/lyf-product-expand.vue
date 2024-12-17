@@ -1,6 +1,6 @@
 <template>
 	<view class="expand-navbar-wrapper">
-		<lyf-product :categoryName="categoryName">
+		<lyf-product categoryName="Groceries">
 			<template v-slot:extra>
 				<scroll-view scroll-x="true" class="nav-scroll">
 						<view class="navbar-item" v-for="(item,index) in 5" :key="index">
@@ -13,9 +13,7 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
 
-const categoryName = ref('Groceries')
 </script>
 
 <style lang="scss" scpend>

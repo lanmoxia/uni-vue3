@@ -35,7 +35,7 @@
 					<lyf-product></lyf-product>
 				</view>
 				<view class="best-selling">
-					<lyf-product :categoryName="categoryName"></lyf-product>
+					<lyf-product categoryName="Best Selling"></lyf-product>
 				</view>
 				<view class="groceries">
 					<lyf-product-expand></lyf-product-expand>
@@ -49,7 +49,6 @@
 <script setup>
 	import {ref} from 'vue'
 	const disabled = ref(true)
-	const categoryName = ref('Best Selling')
 	
 	const indicatorStyle = {
 		left: '295rpx', bottom: '13rpx'

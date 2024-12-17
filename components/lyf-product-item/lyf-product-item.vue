@@ -1,5 +1,5 @@
 <template>
-	<view class="product-item-wrapper">
+	<view class="product-item-wrapper" @click="goDetail">
 		<view class="pro-infor">
 			<view class="pro-picture">
 				<image src="@/common/images/product/product.png" mode="widthFix" />
@@ -18,6 +18,11 @@
 </template>
 
 <script setup>
+	const goDetail = () => {
+		uni.navigateTo({
+			url: "/pages/product-detail/product-detail"
+		})
+	}
 </script>
 
 <style lang="scss" scoped>

@@ -37,7 +37,7 @@
 		},
 		// 指示器位置
 		indicatorStyle: {
-			type: String || Object,
+			type: [String, Object],
 			default: ''
 		},
 		// 自动播放
