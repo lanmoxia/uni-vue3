@@ -50,6 +50,12 @@
 			"style": {
 				"navigationBarTitleText": "favourite"
 			}
+		},
+		{
+			"path": "pages/product-detail/product-detail",
+			"style": {
+				"navigationBarTitleText": "product-detail"
+			}
 		}
 	],
 	"globalStyle": {
