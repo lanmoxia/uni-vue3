@@ -12,7 +12,7 @@
 		<view class="heard">
 			<!-- logo -->
 			<view class="logo">
-				<image src="../../common/icons/logo.svg" mode="widthFix" />
+				<image src="../../common/icons/logo.svg" mode="aspectFit" />
 			</view>
 			<!-- 地理位置 -->
 			<view class="geography">
@@ -27,7 +27,7 @@
 			</view>
 			<!-- 轮播海报 -->
 			<view class="banner">
-				<lyf-banner></lyf-banner>
+				<lyf-swipper-layput :indicatorStyle="indicatorStyle" :pictures="bannerList" showIndicator></lyf-swipper-layput>
 			</view>
 			<!-- 商品分类 -->
 			<view class="category">
@@ -50,6 +50,15 @@
 	import {ref} from 'vue'
 	const disabled = ref(true)
 	const categoryName = ref('Best Selling')
+	
+	const indicatorStyle = {
+		left: '295rpx', bottom: '13rpx'
+	}
+	const bannerList = [
+		'../../common/images/banner/banner.png',
+		'../../common/images/banner/banner.png',
+		'../../common/images/banner/banner.png',
+	]
 </script>
 
 <style lang="scss" scoped>
