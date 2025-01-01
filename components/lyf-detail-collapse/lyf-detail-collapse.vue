@@ -1,7 +1,8 @@
 <template>
 	<view class="detail-collapse">
+			<up-line v-if="showTopLine" :margin= "topLineMargin" color="#E2E2E2B2"></up-line>
 			
-			<view class="top">
+			<view class="top" @click="onCollapse">
 				
 				<view class="collapse-title">{{title}}</view>
 				
@@ -9,7 +10,7 @@
 					
 					<slot name="expand-content"></slot>
 						
-					<view @click="onCollapse" class="rotate-base" :class= "{'rotate-down': showCollapse}">
+					<view class="rotate-base" :class= "{'rotate-down': showCollapse}">
 						<image src="../../common/icons/collapse.svg" mode=""></image>
 					</view>
 					
@@ -22,7 +23,7 @@
 				</text>
 			</view>
 			
-			<up-line v-if="showBottomLine" :class="lineCustomClass" :style="{marginTop: lineMarginTop + 'rpx !important'}" color="#E2E2E2B2"></up-line>
+			<up-line v-if="showBottomLine" :margin= "BottomLineMargin" color="#E2E2E2B2"></up-line>
 	</view>
 </template>
 
@@ -48,17 +49,17 @@
 			type: Boolean,
 			default: true
 		},
-		customLineClass: {
+		showTopLine: {
 			type: Boolean,
-			default: false
+			default: true
 		},
-		lineCustomClass: {
+		topLineMargin: {
 			type: String,
-			default: "bottom-line"
+			default: "0 0 33rpx 0"
 		},
-		lineMarginTop: {
+		BottomLineMargin: {
 			type: String,
-			default: ""
+			default: "33rpx 0 0 0"
 		}
 	})
 </script>
@@ -98,12 +99,11 @@
 			}
 		}
 	
-		.bottom-line {margin-top: 55rpx !important; }
-	
 		.collapse-base {
 			font-size: 24rpx;
 			color: #7C7C7CFF;
 			overflow: hidden;
+			line-height: 38rpx;
 			display: grid;
 			grid-template-rows: 0fr;
 			padding: 0;
